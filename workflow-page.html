@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Drag and Drop</title>
+    <link rel="icon" type="image/png" href="">
+    <link rel="stylesheet" href="workflow-style.css">
+</head>
+<body>
+
+    <!-- Menu Overlay -->
+    <div class="overlay overlay-slide-left" id="overlay">
+      <!-- Menu Items -->
+      <nav class="main-nav">
+        <ul class="nav-ul">
+          <li id="nav-1" class="slide-out-1 nav-li"><a href="index.html" class="nav-a">Home</a></li>
+          <li id="nav-2" class="slide-out-2 nav-li"><a href="workflow-page.html" class="nav-a">Workflow</a></li>
+          <li id="nav-3" class="slide-out-3 nav-li"><a href="#skills" class="nav-a">Skills</a></li>
+          <li id="nav-4" class="slide-out-4 nav-li"><a href="#projects" class="nav-a">Projects</a></li>
+          <li id="nav-5" class="slide-out-5 nav-li"><a href="#contact" class="nav-a">Contact</a></li>
+        </ul>
+      </nav>
+    </div>
+    <!-- Menu Bars -->
+    <div class="menu-bars" id="menu-bars">
+      <div class="bar1"></div>
+      <div class="bar2"></div>
+      <div class="bar3"></div>
+    </div>
+    <!-- Sections -->
+    <section id="home"><a href="index.html" class="section-a">Smarter</a>
+          <!-- Board -->
+          <h1 class="main-title">Workflow Board</h1>
+          <div class="drag-container">
+            <ul class="drag-list">
+                <!-- Backlog Column -->
+                <li class="drag-column backlog-column">
+                    <span class="header">
+                        <h1>Backlog</h1>
+                    </span>
+                    <!-- Backlog Content -->
+                    <div id="backlog-content" class="cumtom-scroll">
+                        <ul class="drag-item-list" id="backlog-list"
+                        ondrop="drop(event)" ondragover="allowDrop(event)"
+                        ondragenter="dragEnter(0)">
+                        </ul>
+                    </div>
+                    <!-- Add Button Group -->
+                    <div class="add-btn-group">
+                        <div class="add-btn" onclick="showInputBox(0)">
+                            <span class="plus-sign">+</span>
+                            <span>Add Item</span>
+                        </div>
+                        <div class="add-btn solid" onclick="hideInputBox(0)">
+                            <span>Save Item</span>
+                        </div>
+                    </div>
+                    <div class="add-container">
+                        <div class="add-item" contenteditable="true"></div>
+                    </div>
+                    
+                </li>
+    
+                <!-- Progress Column -->
+                <li class="drag-column progress-column">
+                    <span class="header">
+                        <h1>progress</h1>
+                    </span>
+                    <!-- Progress Content -->
+                    <div id="progress-content" class="custom-scroll">
+                        <ul class="drag-item-list" id="progress-list"
+                        ondrop="drop(event)" ondragover="allowDrop(event)"
+                        ondragenter="dragEnter(1)">
+                        </ul>
+                    </div>
+                    <!-- Add Button Group -->
+                    <div class="add-btn-group">
+                        <div class="add-btn" onclick="showInputBox(1)">
+                            <span class="plus-sign">+</span>
+                            <span>Add Item</span>
+                        </div>
+                        <div class="add-btn solid" onclick="hideInputBox(1)">
+                            <span>Save Item</span>
+                        </div>
+                    </div>
+                    <div class="add-container">
+                        <div class="add-item" contenteditable="true"></div>
+                    </div>                
+                </li>
+    
+                <!-- Complete Column -->
+                <li class="drag-column complete-column">
+                    <span class="header">
+                        <h1>complete</h1>
+                    </span>
+                    <!-- Complete Content -->
+                    <div id="complete-content" class="custom-scroll">
+                        <ul class="drag-item-list" id="complete-list"
+                        ondrop="drop(event)" ondragover="allowDrop(event)"
+                        ondragenter="dragEnter(2)">
+                        </ul>
+                    </div>
+                    <!-- Add Button Group -->
+                    <div clas   s="add-btn-group">
+                        <div class="add-btn" onclick="showInputBox(2)">
+                            <span class="plus-sign">+</span>
+                            <span>Add Item</span>
+                        </div>
+                        <div class="add-btn solid" onclick="hideInputBox(2)">
+                            <span>Save Item</span>
+                        </div>
+                    </div>
+                    <div class="add-container">
+                        <div class="add-item" contenteditable="true"></div>
+                    </div>        
+                </li>
+    
+                <!-- On Hold Column -->
+                <li class="drag-column on-hold-column">
+                    <span class="header">
+                        <h1>on-hold</h1>
+                    </span>
+                    <!-- On Hold Content -->
+                    <div id="on-hold-content" class="custom-scroll">
+                        <ul class="drag-item-list" id="on-hold-list"
+                        ondrop="drop(event)" ondragover="allowDrop(event)"
+                        ondragenter="dragEnter(3)">
+                        </ul>
+                    </div>
+                    <!-- Add Button Group -->
+                    <div class="add-btn-group">
+                        <div class="add-btn" onclick="showInputBox(3)">
+                            <span class="plus-sign">+</span>
+                            <span>Add Item</span>
+                        </div>
+                        <div class="add-btn solid" onclick="hideInputBox(3)">
+                            <span>Save Item</span>
+                        </div>
+                    </div>
+                    <div class="add-container">
+                        <div class="add-item" contenteditable="true"></div>
+                    </div>        
+                </li>
+            </ul>
+        </div>
+    </section>
+
+    <!-- Script -->
+    <script src="workflow-script.js"></script>
+</body>
+</html>
