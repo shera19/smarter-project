@@ -433,14 +433,34 @@ ul {
   outline: none;
 }
 
+/* Media Query: Laptop */
+@media screen and (max-width: 1800px) {
+  .main-title {
+    font-size: 2em;
+  }
+}
 
 /* Media Query: Large Smartphone (Vertical) */
 @media (max-width: 600px) {
+  body {
+    overflow-y: auto;
+  }
   section#home a {
     top: 1rem;
     left: 1rem;
   }
+  .drag-container {
+    margin: 0;
+  }
 
+  .drag-list {
+    display: block;
+  }
+
+  .drag-column {
+    margin: 10px;
+  }
+  
   .menu-bars {
     top: 0.5rem;
     right: 1rem;
