@@ -1,4 +1,5 @@
 @import url("https://fonts.googleapis.com/css2?family=Nunito&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300&display=swap');
 
 :root {
   --primaryColor: #fff;
@@ -16,7 +17,14 @@ html {
 body {
   margin: 0;
   background: #000;
-  font-family: Nunito, sans-serif;
+  background-color: white;
+  color: #000;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 700;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 /* --- Navigation Menu ------------------------------ */
@@ -207,10 +215,10 @@ section {
   position: relative;
   display: flex;
   justify-content: center;
+  align-items: center;
   flex-flow: column;
   text-transform: uppercase;
   letter-spacing: 2px;
-  color: var(--primaryColor);
 }
 
 section#home {
@@ -233,6 +241,35 @@ section#home .section-a {
   border-bottom: 1px solid black;
 }
 
+.quote-container {
+  letter-spacing: 0px;
+  width: auto;
+  max-width: 900px;
+  padding: 20px 30px;
+  border-radius: 10px;
+  background-color: rgba(255, 255, 255, 0.4);
+  box-shadow: 0 10px 10px 10px rgba(0, 0, 0, 0.2);
+  text-transform: none;
+}
+
+.quote-text {
+  font-size: 2.45rem;
+}
+
+.long-quote {
+  font-size: 2rem;
+}
+
+.fa-quote-left {
+  font-size: 4rem;
+}
+
+.quote-author {
+  margin-top: 15px;
+  font-size: 2rem;
+  font-weight: 400;
+  font-style: italic;
+}
 
 /* Media Query: Large Smartphone (Vertical) */
 @media (max-width: 600px) {
@@ -244,5 +281,13 @@ section#home .section-a {
   .menu-bars {
     top: 0.5rem;
     right: 1rem;
+  }
+  
+  .quote-container {
+    margin: auto 10px;
+  }
+
+  .quote-text {
+    font-size: 1.8rem;
   }
 }
