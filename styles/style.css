@@ -43,26 +43,27 @@ body {
 }
 
 /* Nav Menu Items */
-nav,
-nav ul {
+.main-nav,
+.main-nav .nav-ul {
   height: 100vh;
   margin: 0;
   padding: 0;
+  font-family: Nunito, sans-serif;
 }
 
-nav ul {
+.main-nav .nav-ul {
   display: flex;
   flex-direction: column;
   justify-content: stretch;
   list-style: none;
 }
 
-nav ul li {
+.main-nav .nav-ul .nav-li {
   height: 20%;
   overflow: hidden;
 }
 
-nav li a {
+.main-nav .nav-li .nav-a {
   position: relative;
   top: 45%;
   color: #FFF;
@@ -73,11 +74,11 @@ nav li a {
   text-align: center;
 }
 
-nav li a:hover {
+.main-nav .nav-li .nav-a:hover {
   transform: scale(1.2);
 }
 
-nav li a::before {
+.main-nav .nav-li .nav-a::before {
   content: "";
   width: 25vw;
   height: 3px;
@@ -88,23 +89,23 @@ nav li a::before {
   opacity: 0;
 }
 
-nav li a:hover::before {
+.main-nav .nav-li .nav-a:hover::before {
   opacity: 1;
 }
 
-nav li:nth-of-type(1){
+.main-nav li:nth-of-type(1){
   background-color: var(--navColor1);
 }
-nav li:nth-of-type(2){
+.main-nav .nav-li:nth-of-type(2){
   background-color: var(--navColor2);
 }
-nav li:nth-of-type(3){
+.main-nav .nav-li:nth-of-type(3){
   background-color: var(--navColor3);
 }
-nav li:nth-of-type(4){
+.main-nav .nav-li:nth-of-type(4){
   background-color: var(--navColor4);
 }
-nav li:nth-of-type(5){
+.main-nav .nav-li:nth-of-type(5){
   background-color: var(--navColor5);
 }
 
@@ -209,7 +210,6 @@ section {
   align-items: center;
   text-transform: uppercase;
   letter-spacing: 2px;
-  color: var(--primaryColor);
 }
 
 section#home {
@@ -218,7 +218,7 @@ section#home {
   background-position: center center;
 }
 
-section#home a {
+section#home .section-a {
   position: absolute;
   z-index: 2;
   top: 1.5rem;
@@ -229,22 +229,6 @@ section#home a {
   color: black;
   border-bottom: 1px solid black;
   
-}
-
-section#about {
-  background-color: var(--navColor2);
-}
-
-section#skills {
-  background-color: var(--navColor3);
-}
-
-section#projects {
-  background-color: var(--navColor4);
-}
-
-section#contact {
-  background-color: var(--navColor5);
 }
 
 /* Media Query: Large Smartphone (Vertical) */

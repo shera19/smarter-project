@@ -1,14 +1,4 @@
-const menuBars=document.getElementById('menu-bars');
-const overlay=document.getElementById('overlay');
-const nav1=document.getElementById('nav-1');
-const nav2=document.getElementById('nav-2');
-const nav3=document.getElementById('nav-3');
-const nav4=document.getElementById('nav-4');
-const nav5=document.getElementById('nav-5');
-const navItems = [nav1, nav2, nav3, nav4, nav5];
-
 // Board document declorations
-
 const addBtns = document.querySelectorAll('.add-btn:not(.solid)');
 const saveItemBtns = document.querySelectorAll('.solid');
 const addItemContainers = document.querySelectorAll('.add-container');
@@ -34,38 +24,6 @@ let listArrays = [];
 let draggedItem;
 let dragging = false;
 let currentColumn;
-
-//  Navigation Part
-
-// Control Navigation Animation 
-function navAnimattion(direction1, direction2) {
-    navItems.forEach((nav, i) => {
-        nav.classList.replace(`slide-${direction1}-${i + 1}`, `slide-${direction2}-${i + 1}`);
-    });
-}
-
-function toggleNav() {
-    // Toggle: Menu Bars Open/Close 
-    menuBars.classList.toggle('change');
-    // Toggle: Menu Active
-    overlay.classList.toggle('overlay-active');
-    if(overlay.classList.contains('overlay-active')) {
-        // Animate In - Overlay
-        overlay.classList.replace('overlay-slide-left', 'overlay-slide-right');
-        // Animate In - Nav Items
-        navAnimattion('out', 'in');
-    } else {
-        // Animate Out - Overlay
-        overlay.classList.replace('overlay-slide-right', 'overlay-slide-left');
-        navAnimattion('in', 'out');
-    }
-}    
-
-// Event Listeners
-menuBars.addEventListener('click', toggleNav);
-navItems.forEach((nav) => {
-    nav.addEventListener('click', toggleNav);
-});
 
 // Get Arrays from localStorage if available, set default values if not
 function getSavedColumns() {
