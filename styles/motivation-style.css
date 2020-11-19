@@ -112,3 +112,13 @@ button:active {
     font-size: 1.8rem;
   }
 }
+
+/* Media Query: Large Smartphone (Vertical) */
+@media screen and (max-width: 600px) {
+  .quote-container{
+    min-width: 0;
+    max-width: 95vw;
+    min-height: 0;
+    max-height: 60vh;
+  }
+}

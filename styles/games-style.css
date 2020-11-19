@@ -1,0 +1,14 @@
+body {
+    display: flex;
+    justify-content: center;
+
+    /* font-family: "Courier New", Courier, monospace; */
+}
+
+section#home {
+    background-image: url("https://images.unsplash.com/photo-1556106792-39992e83c564?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1352&q=80");
+    background-size: cover;
+    background-position: center center;
+  }
+  
+  

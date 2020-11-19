@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Custom Video Player</title>
+    <link rel="icon" type="image/png" href="favicon.png">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.2/css/all.min.css"/>
+    <link type="text/css" rel="stylesheet" href="styles/style.css">
+    <link type="text/css" rel="stylesheet" href="styles/video-style.css">
+</head>
+<body>
+    <!-- Menu Overlay -->
+  <div class="overlay overlay-slide-left" id="overlay">
+    <!-- Menu Items -->
+    <nav class="main-nav">
+      <ul class="nav-ul">
+        <li id="nav-1" class="slide-out-1 nav-li"><a href="index.html" class="nav-a">Home</a></li>
+        <li id="nav-2" class="slide-out-2 nav-li"><a href="workflow-page.html" class="nav-a">Workflow</a></li>
+        <li id="nav-3" class="slide-out-3 nav-li"><a href="motivation-page.html" class="nav-a">Motivation</a></li>
+        <li id="nav-4" class="slide-out-4 nav-li"><a href="video-page.html" class="nav-a">Videos</a></li>
+        <li id="nav-5" class="slide-out-5 nav-li"><a href="games-page.html" class="nav-a">Games</a></li>
+      </ul>
+    </nav>
+  </div>
+  <!-- Menu Bars -->
+  <div class="menu-bars" id="menu-bars">
+    <div class="bar1"></div>
+    <div class="bar2"></div>
+    <div class="bar3"></div>
+  </div>
+  <!-- Sections -->
+  <section id="home"><a href="#home" class="section-a">Smarter</a>
+    <div class="player">
+        <video class="video" src='https://pixabay.com/videos/download/video-31377_tiny.mp4?attachment' playsinline></video>
+        <div class="show-controls">
+            <div class="controls-container">
+                <!-- Progress Bar -->
+                <div class="progress-range" title="Seek">
+                    <div class="progress-bar"></div>
+                </div>
+                <div class="control-group">
+                    <!-- Left Controls -->
+                    <div class="controls-left">
+                        <!-- Play/Pause -->
+                        <div class="play-controls">
+                            <i class="fas fa-play" title="Play" id="play-btn"></i>
+                        </div>
+                        <!-- Volume -->
+                        <div class="volume">
+                            <div class="volume-icon">
+                                <i class="fas fa-volume-up" title="Mute" id="volume-icon"></i>
+                            </div>
+                            <div class="volume-range" title="Change Volume">
+                                <div class="volume-bar"></div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Right Controls -->
+                    <div class="controls-right">
+                        <!-- Speed -->
+                        <div class="speed" title="Playback Rate">
+                            <select name="playbackRate" class="player-speed">
+                                <option value="0.5">0.5 x</option>
+                                <option value="0.75">0.75 x</option>
+                                <option value="1" selected>1.0 x</option>
+                                <option value="1.5">1.5 x</option>
+                                <option value="2">2.0 x</option>
+                            </select>
+                        </div>
+                        <!-- Time -->
+                        <div class="time">
+                            <span class="time-elapsed">00:00 / </span>
+                            <span class="time-duration">02:49</span>
+                        </div>
+                        <!-- Fullscreen -->
+                        <div class="fullscreen">
+                            <i class="fas fa-expand"></i>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+  <!-- Script -->
+  <script src="javascript/script.js"></script>
+  <script src="javascript/video-script.js"></script>
+
+</body>
+</html>
