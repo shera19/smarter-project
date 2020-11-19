@@ -1,4 +1,5 @@
 @import url("https://fonts.googleapis.com/css2?family=Nunito&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&display=swap');
 
 :root {
   --primaryColor: #fff;
@@ -17,6 +18,11 @@ body {
   margin: 0;
   background: #000;
   font-family: Nunito, sans-serif;
+}
+
+.main-title {
+  font-family: 'Dancing Script', cursive;
+  font-size: 3rem;
 }
 
 /* --- Navigation Menu ------------------------------ */
@@ -242,4 +248,9 @@ section#home .section-a {
     top: 0.5rem;
     right: 1rem;
   }
+
+  .main-title{
+    font-size: 1rem;
+  }
+  
 }
